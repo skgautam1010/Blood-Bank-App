@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { useTranslation } from "react-i18next";
-
+import {API} from "./backend";
 
 const ReqData1 = async () => {
     
@@ -9,7 +9,7 @@ const ReqData1 = async () => {
         var a1 = document.querySelector("#Auser1").value;
         var a2 = document.querySelector("#Apasword1").value;
         if (a1 !== "" && a2 !== "") {
-            const res = await fetch("http://localhost:8000/admin_login", {
+            const res = await fetch(`${API}admin_login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

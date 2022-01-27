@@ -41,9 +41,9 @@ const Navbar = () => {
                         <li className="nav-item mx-1">
                             <NavLink className="nav-link" to="/donor/login"> <span className="Icon"> <i class="bi bi-people-fill p-1"></i> {t("donor")} </span>  </NavLink>
                         </li>
-                        <li className="nav-itemmx-1">
+                        {/*<li className="nav-itemmx-1">
                             <NavLink className="nav-link" to="/admin/login">  <span className="Icon"> <i class="bi bi-person-fill p-1"></i>  {t("admin")} </span>  </NavLink>
-                        </li>
+                        </li>*/}
                         <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="lang" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">  <span className="Icon"> <i class="bi bi-translate p-1"></i>  {t("language")} </span>  </NavLink>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

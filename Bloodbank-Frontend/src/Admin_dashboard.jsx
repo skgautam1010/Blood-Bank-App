@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 //import AdminHP from "./AdminHP";
-
+import {API} from "./backend";
 
 const ReqData1 = async () => {
     try {
-        const res = await fetch("http://localhost:8000/admin_dashboard", {
+        const res = await fetch(`${API}admin_dashboard`, {
             // method: "GET",
         });
         const fdata = await res.json();
@@ -46,7 +46,7 @@ const ReqData2 = async () => {
     try {
         var a1 = document.querySelector("#Uinput1").value;
         var a2 = document.querySelector("#Uinput2").value;
-        const res = await fetch("http://localhost:8000/update_blood_bank", {
+        const res = await fetch(`${API}update_blood_bank`, {
             method: "POST",
             body: JSON.stringify({
                 bgroup: a1,
@@ -67,7 +67,7 @@ const ReqData3 = async () => {
     try {
         var a1 = document.querySelector("#Uinput11").value;
         var a2 = document.querySelector("#Uinput22").value;
-        const res = await fetch("http://localhost:8000/update_blood_bank", {
+        const res = await fetch(`${API}update_blood_bank`, {
             method: "POST",
             body: JSON.stringify({
                 bgroup: a1,

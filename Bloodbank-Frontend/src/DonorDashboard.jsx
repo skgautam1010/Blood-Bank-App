@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import PatientDH from "./PatientDH";
 import { NavLink } from "react-router-dom";
-
+import {API} from "./backend";
 
 
 const GetData = async () => {
     var cc = sessionStorage.getItem("username");
 
     console.log(document.cookie)
-    const res = await fetch("http://localhost:8000/donor_request_history", {
+    const res = await fetch(`${API}donor_request_history`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import I1 from "./image/img1.jpg"
 import { useTranslation } from "react-i18next";
-
+import {API} from "./backend";
 
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
             var a6 = document.querySelector("#Hnumber").value;
             console.log(10)
             if (a1 != "" && a2 != "" && a3 != "" && a4 != "" && a5 != "" && a6 != "") {
-                const res = await fetch("http://localhost:8000/emergency_request", {
+                const res = await fetch(`${API}emergency_request`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'

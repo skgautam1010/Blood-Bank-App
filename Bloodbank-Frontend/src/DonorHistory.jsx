@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PatientDHis from "./PatientDHis";
 import { NavLink } from "react-router-dom";
 
-
+import {API} from "./backend";
 
 
 
@@ -10,7 +10,7 @@ const GetData1 = async () => {
     // var cc = document.cookie.split("=")[1];
     var cc = sessionStorage.getItem("username");
     console.log(cc)
-    const res = await fetch("http://localhost:8000/donor_request_history", {
+    const res = await fetch(`${API}donor_request_history`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'

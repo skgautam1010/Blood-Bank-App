@@ -2,14 +2,14 @@ import React from "react";
 //import Login from "./Login";
 import Navbar from "./Navbar";
 import { useTranslation } from "react-i18next";
-
+import {API} from "./backend";
 
 const ReqData1 = async () => {
     try {
         var a1 = document.querySelector("#Duser1").value;
         var a2 = document.querySelector("#Dpasword1").value;
         if (a1 !== "" && a2 !== "") {
-            const res = await fetch("http://localhost:8000/donor_login", {
+            const res = await fetch(`${API}donor_login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ const ReqData2 = async () => {
 
         console.log(10)
         if (a1 !== "" && a2 !== "" && a3 !== "" && a4 !== "" && a5 !== "" && a6 !== "" && a7 !== "" && a8 !== "" && a9 !== "" && a10 !== "" && a11 !== "" && a12 !== "") {
-            const res = await fetch("http://localhost:8000/donor_register", {
+            const res = await fetch(`${API}donor_register`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

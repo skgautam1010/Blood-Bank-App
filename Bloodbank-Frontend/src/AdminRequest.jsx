@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import { API } from "./backend";
 
 const GetData1 = async () => {
-    const res = await fetch("http://localhost:8000/admin_get_all_requests")
+    const res = await fetch(`${API}admin_get_all_requests`)
     const FinalData = await res.json();
     console.log(FinalData.data);
     var reqmad = document.querySelectorAll(".apnd");
@@ -79,7 +79,7 @@ async function StatusChange(status, id) {
                 </ul>
             
     `;
-    const res = await fetch("http://localhost:8000/change_request_status", {
+    const res = await fetch(`${API}change_request_status`, {
         method: "POST",
         body: JSON.stringify({
             status: status,

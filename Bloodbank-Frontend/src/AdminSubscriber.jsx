@@ -1,8 +1,9 @@
 import React , {useState} from 'react';
 import { NavLink } from "react-router-dom";
+import {API} from "./backend";
 
 const Getdonordata = async () => {
-    const res = await fetch("http://localhost:8000/admin_donor_detail")
+    const res = await fetch(`${API}admin_donor_detail`)
     const FinalData = await res.json();
     console.log(FinalData.data);
     var reqmad = document.querySelectorAll(".apnd");
@@ -21,7 +22,7 @@ const Getdonordata = async () => {
     
 }
 const Getpatientdata = async () => {
-    const res = await fetch("http://localhost:8000/admin_patient_detail")
+    const res = await fetch(`${API}admin_patient_detail`)
     const FinalData = await res.json();
     console.log(FinalData.data);
     var reqmad = document.querySelectorAll(".apndd");

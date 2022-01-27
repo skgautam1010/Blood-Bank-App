@@ -3,7 +3,7 @@ import React,{useState} from "react";
 import { NavLink } from "react-router-dom";
 import validator from 'validator'
 import emailjs from 'emailjs-com'
-
+import {API} from "./backend";
 
 const ReqData = async () => {
     try {
@@ -16,7 +16,7 @@ const ReqData = async () => {
         // var cc = document.cookie.split("=")[1];
         var cc = sessionStorage.getItem("username");
         if (a1 !== "" && a2 !== "" && a3 !== "" && a4 !== "" && a5 !== "") {
-            const res = await fetch("http://localhost:8000/donor_blood_request", {
+            const res = await fetch(`${API}donor_blood_request`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
