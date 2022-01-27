@@ -1,0 +1,173 @@
+.bi{
+    font-size: 22px;
+}
+
+.Icon{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.img{
+    width: 100vw;
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.bi-heart-fill{
+    color: crimson;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 25px;
+    animation: anim .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+}
+
+@keyframes anim{
+    from{font-size: 28px;}
+    to{font-size: 25px;}
+}
+
+.head{
+    padding-left: 30px;
+}
+.height{
+    min-height: 70vh;
+}
+
+.create{
+    color: crimson;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.logout{
+    display: block;
+}
+
+.nav-link:hover  .bi{
+color: crimson;
+}
+
+.num{
+    padding : 0 10px;
+    font-size: 25px;
+    color: crimson;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+.req{
+     padding : 0 10px;
+    font-size: 25px;
+    color: rgb(0, 177, 174);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+.bg-info{
+    font-weight: bold;
+}
+
+.status{
+    background-color: crimson;
+    color: white;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 5px;
+}    
+
+.bi-droplet-fill{
+    color: red;
+    font-size: 30px;
+    position: relative;
+    top: -3px;
+}
+
+.numb{
+    font-size: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: gray;
+}
+
+.dons{
+    position: relative;
+    top: 3px;
+    padding: 0 8px;
+}
+
+.numbe{
+    font-size: 18px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: gray;
+}
+
+.edit{
+    color: skyblue;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+.delete{
+    color: red;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.dropdown-menu[data-bs-popper]{
+    left: -30px;
+    cursor: pointer;
+}
+
+.lang{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.lang::before{
+    content: " |> ";
+    color: gray;
+}
+
+.arrow{
+    position: relative;
+    top: 2px;
+    color: rgb(126, 126, 126);
+}
+
+span.title{
+    font-size: 30px;
+    display: block;
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bg-info{
+    background-color: rgb(0, 201, 134) !important ;
+    color: whitesmoke;
+    border: none;
+}
+
+.homeform{
+    position: absolute;
+    top: 13vh;
+    right:5vh;
+    background-color: #e3f2f2e8 !important;
+    /* border: 1px solid rgba(216, 112, 147, 0.671); */
+   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
