@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { useTranslation } from "react-i18next";
+import {API} from "./backend";
 
 const ReqData1 = async () => {
     try {
@@ -8,7 +9,7 @@ const ReqData1 = async () => {
         var a2 = document.querySelector("#Ppasword1").value;
         console.log(a1 + a2)
         if (a1 != "" && a2 != "") {
-            const res = await fetch("http://localhost:8000/patient_login", {
+            const res = await fetch(`${API}patient_login`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -59,7 +60,7 @@ const ReqData2 = async () => {
         var a12 = document.querySelector("#Pnumber").value;
 
         if (a1 != "" && a2 != "" && a3 != "" && a4 != "" && a5 != "" && a6 != "" && a7 != "" && a8 != "" && a9 != "" && a10 != "" && a11 != "" && a12 != "") {
-            const res = await fetch("http://localhost:8000/patient_register", {
+            const res = await fetch(`${API}patient_register`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
